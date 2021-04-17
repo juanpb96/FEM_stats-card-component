@@ -1,14 +1,96 @@
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap);
 @import "sass/helpers/variables.scss";
+@import "sass/helpers/placeholder.scss";
 
 body {
     font-size: 15px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $bg-color;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 80%;
+    background-color: $card-bg-color;
+    border-radius: 5px;
+    margin: 80px 0;
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__description {
+        width: 70%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    &__header {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        @extend %title-font;
+    }
+
+    &__emphasis {
+        color: $accent-color;
+    }
+
+    &__subtitle {
+        font-size: 0.75rem;
+        line-height: 1.7;
+        @extend %subtitle-font;
+    }
+
+    &__stats {
+        .stat {
+            &__title {
+                font-size: 1.562rem;
+                margin-bottom: 5px;
+                @extend %title-font;
+            }
+
+            &__text {
+                font-size: 0.687rem;
+                margin-top: 5px;
+                letter-spacing: 1.15px;
+                text-transform: uppercase;
+                @extend %subtitle-font;
+            }
+        }
+    }
+
+    &__image {
+        background-color: $accent-color;
+        @extend %border-radius-mobile;
+    }
+
+    &__img {
+        mix-blend-mode: multiply;
+        height: 100%;
+
+        &--mobile {
+            width: 100%;
+            @extend %border-radius-mobile;
+        }
+
+        &--desktop {
+            display: none;
+        }
+    }
 }
 
 .attribution { 
     font-size: 0.687em; 
     text-align: center; 
+    @extend %text-font;
     
     a { 
         color: hsl(228, 45%, 44%); 
