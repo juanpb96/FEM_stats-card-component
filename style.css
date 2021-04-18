@@ -40,7 +40,8 @@ body {
   .card__header {
     margin-bottom: 45px; }
   .card__title {
-    font-size: 1.687rem; }
+    font-size: 1.687rem;
+    font-weight: 700; }
   .card__emphasis {
     color: #aa5cdb; }
   .card__subtitle {
