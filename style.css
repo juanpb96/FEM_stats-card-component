@@ -104,6 +104,8 @@ body {
       flex-direction: column;
       justify-content: center;
       margin: 0; }
+    .card .stat:not(.stat:first-child) {
+      margin-left: 15%; }
     .card__image {
       width: 50%;
       border-radius: 0px 10px 10px 0px; }

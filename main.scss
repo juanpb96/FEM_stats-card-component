@@ -154,6 +154,10 @@ body {
             margin: 0;
         }
 
+        .stat:not(.stat:first-child) {
+            margin-left: 15%;
+        }
+
         &__image {
             width: 50%;
             border-radius: $border-radius-desktop;
