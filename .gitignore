@@ -16,7 +16,7 @@
 .prettierignore
 
 # Avoid uploading README files until the end of the project
-*.md
+style-guide.md
 
 # Avoid uploading .sass-cache
 .sass-cache
