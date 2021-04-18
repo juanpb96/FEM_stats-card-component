@@ -3,13 +3,18 @@
 @import "sass/helpers/variables.scss";
 @import "sass/helpers/placeholder.scss";
 
-body {
+html {
     font-size: 15px;
+}
+
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: $bg-color;
 }
+
+// Mobile styles
 
 .container {
     width: 100%;
@@ -18,24 +23,25 @@ body {
 }
 
 .card {
-    width: 80%;
+    width: 85%;
     background-color: $card-bg-color;
-    border-radius: 5px;
+    border-radius: $border-radius-card;
     margin: 80px 0;
     display: flex;
     flex-direction: column-reverse;
 
     &__description {
-        width: 70%;
-        margin: 20px auto;
+        width: 80%;
+        margin: 25px auto;
         text-align: center;
     }
 
     &__header {
-        margin-bottom: 40px;
+        margin-bottom: 45px;
     }
 
     &__title {
+        font-size: 1.687rem;
         @extend %title-font;
     }
 
@@ -44,7 +50,7 @@ body {
     }
 
     &__subtitle {
-        font-size: 0.75rem;
+        font-size: 1rem;
         line-height: 1.7;
         @extend %subtitle-font;
     }
@@ -58,7 +64,7 @@ body {
             }
 
             &__text {
-                font-size: 0.687rem;
+                font-size: 0.75rem;
                 margin-top: 5px;
                 letter-spacing: 1.15px;
                 text-transform: uppercase;
@@ -69,7 +75,7 @@ body {
 
     &__image {
         background-color: $accent-color;
-        @extend %border-radius-mobile;
+        border-radius: $border-radius-mobile;
     }
 
     &__img {
@@ -78,7 +84,7 @@ body {
 
         &--mobile {
             width: 100%;
-            @extend %border-radius-mobile;
+            border-radius: $border-radius-mobile;
         }
 
         &--desktop {
@@ -94,5 +100,70 @@ body {
     
     a { 
         color: hsl(228, 45%, 44%); 
+    }
+}
+
+// Desktop styles
+
+@media only screen and (min-width: 768px) {
+    .card {
+        width: 60%;
+
+        &__header {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        &__title {
+            font-size: 2.4rem;
+        }
+
+        &__stats {
+            width: 70%;
+            margin: 0 auto 20px;
+    
+            .stat {
+                display: inline-block;
+    
+                &:not(.stat:first-child) {
+                    margin-left: 10%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .card {
+        width: 80%;
+        max-width: 1440px;
+        flex-direction: row;
+
+        &__description {
+            width: 50%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0;
+        }
+
+        &__image {
+            width: 50%;
+            border-radius: $border-radius-desktop;
+        }
+
+        &__img {
+            height: 100%;
+    
+            &--mobile {
+                display: none;
+            }
+    
+            &--desktop {
+                width: 100%;
+                display: inline;
+            }
+        }
     }
 }
