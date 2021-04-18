@@ -88,9 +88,14 @@ body {
         .card__stats .stat:not(.stat:first-child) {
           margin-left: 10%; } }
 @media only screen and (min-width: 1200px) {
+  .container {
+    height: 100vh; }
+
   .card {
     width: 80%;
+    height: max-content;
     max-width: 1440px;
+    margin: auto;
     flex-direction: row; }
     .card__description {
       width: 50%;
