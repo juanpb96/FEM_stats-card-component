@@ -90,7 +90,7 @@ body {
           margin-left: 10%; } }
 @media only screen and (min-width: 1200px) {
   .container {
-    height: 100vh; }
+    height: 40rem; }
 
   .card {
     width: 80%;
